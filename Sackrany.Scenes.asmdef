@@ -1,0 +1,17 @@
+{
+    "name": "Sackrany.Scenes",
+    "rootNamespace": "Sackrany.Scenes",
+    "references": [
+        "Sackrany.Config",
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
