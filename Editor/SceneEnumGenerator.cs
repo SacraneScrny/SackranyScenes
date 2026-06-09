@@ -9,7 +9,7 @@ using UnityEditor.Build.Reporting;
 
 using UnityEngine;
 
-namespace Sackrany.Scenes.Editor.SackranyScenes.Editor
+namespace SackranyScenes.Editor
 {
     public class SceneEnumGenerator : IPreprocessBuildWithReport
     {
@@ -17,7 +17,7 @@ namespace Sackrany.Scenes.Editor.SackranyScenes.Editor
 
         const string OutputDir   = "Assets/_Generated/Scenes";
         const string OutputPath  = OutputDir + "/GameScenes.cs";
-        const string AsmdefPath  = OutputDir + "/Sackrany.Scenes.Generated.asmdef";
+        const string AsmdefPath  = OutputDir + "/SackranyScenes.Generated.asmdef";
 
         [MenuItem("Sackrany/Scenes/Generate Scene Names")]
         public static void Generate()
@@ -32,7 +32,7 @@ namespace Sackrany.Scenes.Editor.SackranyScenes.Editor
 
             var sb = new StringBuilder();
             sb.AppendLine("// AUTO-GENERATED — не редактировать вручную");
-            sb.AppendLine("// Имена сцен из Build Settings. Используй вместе с Sackrany.Scenes.SceneLoader.Load(...).");
+            sb.AppendLine("// Имена сцен из Build Settings. Используй вместе с SackranyScenes.SceneLoader.Load(...).");
             sb.AppendLine("public static class GameScenes");
             sb.AppendLine("{");
 
@@ -62,7 +62,7 @@ namespace Sackrany.Scenes.Editor.SackranyScenes.Editor
 
             const string json =
                 @"{
-    ""name"": ""Sackrany.Scenes.Generated"",
+    ""name"": ""SackranyScenes.Generated"",
     ""rootNamespace"": """",
     ""references"": [],
     ""includePlatforms"": [],

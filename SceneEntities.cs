@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks;
 
 using UnityEngine.SceneManagement;
 
-namespace Sackrany.Scenes.SackranyScenes
+namespace SackranyScenes
 {
     public class SceneData
     {

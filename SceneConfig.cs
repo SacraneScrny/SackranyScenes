@@ -2,7 +2,7 @@
 
 using SackranyConfig;
 
-namespace Sackrany.Scenes.SackranyScenes
+namespace SackranyScenes
 {
     [Serializable]
     public class SceneConfig : IConfig

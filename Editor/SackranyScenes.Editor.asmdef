@@ -1,8 +1,8 @@
 {
-    "name": "Sackrany.Scenes.Editor",
-    "rootNamespace": "Sackrany.Scenes.Editor",
+    "name": "SackranyScenes.Editor",
+    "rootNamespace": "SackranyScenes.Editor",
     "references": [
-        "Sackrany.Scenes"
+        "SackranyScenes"
     ],
     "includePlatforms": [
         "Editor"

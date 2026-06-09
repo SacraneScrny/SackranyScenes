@@ -1,6 +1,6 @@
 {
-    "name": "Sackrany.Scenes",
-    "rootNamespace": "Sackrany.Scenes",
+    "name": "SackranyScenes",
+    "rootNamespace": "SackranyScenes",
     "references": [
         "SackranyConfig",
         "UniTask"

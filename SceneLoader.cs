@@ -9,7 +9,7 @@ using SackranyConfig;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Sackrany.Scenes.SackranyScenes
+namespace SackranyScenes
 {
     /// <summary>
     /// Чистый аддитивный загрузчик сцен. Никаких «системных» сцен и внешних
