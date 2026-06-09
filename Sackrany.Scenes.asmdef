@@ -2,7 +2,7 @@
     "name": "Sackrany.Scenes",
     "rootNamespace": "Sackrany.Scenes",
     "references": [
-        "Sackrany.Config",
+        "SackranyConfig",
         "UniTask"
     ],
     "includePlatforms": [],

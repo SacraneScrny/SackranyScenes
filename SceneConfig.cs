@@ -1,6 +1,6 @@
 ﻿using System;
 
-using Sackrany.ConfigSystem.SackranyConfig;
+using SackranyConfig;
 
 namespace Sackrany.Scenes.SackranyScenes
 {

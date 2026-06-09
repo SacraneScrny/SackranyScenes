@@ -4,6 +4,8 @@ using System.Linq;
 
 using Cysharp.Threading.Tasks;
 
+using SackranyConfig;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
