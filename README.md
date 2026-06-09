@@ -1,4 +1,4 @@
-# Sackrany.Scenes
+# SackranyScenes
 
 Чистый аддитивный загрузчик сцен. **Без концепции «системных сцен»** — никаких
 `SystemScene`/`UIScene` и зависимости от внешнего сериализатора.
@@ -18,8 +18,8 @@ var cur = SceneLoader.CurrentScene;
 ## Кодген
 
 `Sackrany/Scenes/Generate Scene Names` пишет в `Assets/_Generated/Scenes/`:
-`GameScenes` (константы имён сцен) + `Sackrany.Scenes.Generated.asmdef`. Это обычный
+`GameScenes` (константы имён сцен) + `SackranyScenes.Generated.asmdef`. Это обычный
 класс, а не `partial`, поэтому asmdef не ломается.
 
 **Конфиг:** `SceneConfig` (`DefaultScene`).
-**Зависимости:** `Sackrany.Config`, UniTask. **Editor:** генератор `Sackrany.Scenes.Editor`.
+**Зависимости:** `SackranyConfig`, UniTask. **Editor:** генератор `SackranyScenes.Editor`.
