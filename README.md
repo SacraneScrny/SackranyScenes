@@ -1,11 +1,8 @@
 # SackranyScenes
 
-Чистый аддитивный загрузчик сцен. **Без концепции «системных сцен»** — никаких
-`SystemScene`/`UIScene` и зависимости от внешнего сериализатора.
+Additive scene loader with no concept of "system scenes" — no `SystemScene`/`UIScene` or external serializer dependency.
 
-Все сцены из Build Settings регистрируются на старте. В каждый момент загружена одна
-«текущая» сцена; `Load` аддитивно подгружает новую и выгружает предыдущую (сначала
-грузит, потом выгружает — чтобы никогда не остаться без сцены).
+All scenes from Build Settings are registered on startup. At any given moment one "current" scene is loaded; `Load` additively loads the next scene and unloads the previous one (loads first, then unloads — so there is never zero loaded scenes).
 
 ```csharp
 SceneLoader.Load(GameScenes.MAIN_MENU);
@@ -13,13 +10,12 @@ await SceneLoader.LoadAsync(GameScenes.LEVEL_01);
 var cur = SceneLoader.CurrentScene;
 ```
 
-В билде на старте грузится `SceneConfig.DefaultScene` (в редакторе — нет).
+In a build, `SceneConfig.DefaultScene` is loaded on startup (skipped in the editor).
 
-## Кодген
+## Codegen
 
-`Sackrany/Scenes/Generate Scene Names` пишет в `Assets/_Generated/Scenes/`:
-`GameScenes` (константы имён сцен) + `SackranyScenes.Generated.asmdef`. Это обычный
-класс, а не `partial`, поэтому asmdef не ломается.
+`Sackrany/Scenes/Generate Scene Names` writes to `Assets/_Generated/Scenes/`:
+`GameScenes` (scene name constants) + `SackranyScenes.Generated.asmdef`. It is a plain class, not `partial`, so it doesn't interfere with the asmdef.
 
-**Конфиг:** `SceneConfig` (`DefaultScene`).
-**Зависимости:** `SackranyConfig`, UniTask. **Editor:** генератор `SackranyScenes.Editor`.
+**Config:** `SceneConfig` (`DefaultScene`).
+**Dependencies:** `SackranyConfig`, UniTask. **Editor:** `SackranyScenes.Editor`.

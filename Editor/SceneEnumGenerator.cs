@@ -31,8 +31,8 @@ namespace SackranyScenes.Editor
                 .Distinct();
 
             var sb = new StringBuilder();
-            sb.AppendLine("// AUTO-GENERATED — не редактировать вручную");
-            sb.AppendLine("// Имена сцен из Build Settings. Используй вместе с SackranyScenes.SceneLoader.Load(...).");
+            sb.AppendLine("// AUTO-GENERATED — do not edit manually");
+            sb.AppendLine("// Scene names from Build Settings. Use with SackranyScenes.SceneLoader.Load(...).");
             sb.AppendLine("public static class GameScenes");
             sb.AppendLine("{");
 
@@ -52,10 +52,6 @@ namespace SackranyScenes.Editor
         static string ToConstName(string name)
             => name.ToUpper().Replace(" ", "_").Replace("-", "_");
 
-        /// <summary>
-        /// Сгенерированный код живёт в отдельной сборке, чтобы не ломать asmdef
-        /// руками написанных фич. Класс констант ни от чего не зависит.
-        /// </summary>
         static void EnsureAsmdef()
         {
             if (File.Exists(AsmdefPath)) return;

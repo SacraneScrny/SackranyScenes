@@ -11,14 +11,6 @@ using UnityEngine.SceneManagement;
 
 namespace SackranyScenes
 {
-    /// <summary>
-    /// Чистый аддитивный загрузчик сцен. Никаких «системных» сцен и внешних
-    /// сериализаторов — единственная зависимость это ConfigSystem (для DefaultScene).
-    ///
-    /// Все сцены из Build Settings регистрируются на старте. В любой момент времени
-    /// загружена одна «текущая» сцена; <see cref="Load"/> аддитивно подгружает новую
-    /// и выгружает предыдущую.
-    /// </summary>
     public static class SceneLoader
     {
         static readonly Dictionary<string, SceneData> _scenes = new();
@@ -84,8 +76,7 @@ namespace SackranyScenes
                 if (current != null)
                     await current.WaitForLoad();
 
-                // Грузим новую сцену до выгрузки старой, чтобы никогда не оставаться
-                // без единственной загруженной сцены.
+                // Load next before unloading current to never have zero loaded scenes.
                 await next.Load();
 
                 if (current != null && current != next)
